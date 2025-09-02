@@ -4,7 +4,7 @@ from sqlalchemy.sql import func
 from backend.database.database import Base
 
 
-class ProductModels(Base):
+class Product(Base):
     __tablename__ = "products"
 
     id = Column(Integer, primary_key=True)
