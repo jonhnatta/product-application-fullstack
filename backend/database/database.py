@@ -13,14 +13,15 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 Base = declarative_base()
 
+
 def get_db():
-  """
-  Gerenciador de sessão do banco de dados.
-  Cria, fornece e fecha automaticamente uma sessão.
-  yield: fornece a sessão
-  """
-  db = SessionLocal()
-  try:
-    yield db
-  finally:
-    db.close
+    """
+    Gerenciador de sessão do banco de dados.
+    Cria, fornece e fecha automaticamente uma sessão.
+    yield: fornece a sessão
+    """
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close
