@@ -27,10 +27,8 @@ class ProductResponse(ProductBase):
 
 
 class ProductUpdate(BaseModel):
-    name: Optional[str] = Field(max_length=100)
-    description: Optional[str] = Field(max_length=500)
-    price: Optional[Decimal] = Field(
-        ge=0, description="Preço não deve ser menor que zero"
-    )
-    category: Optional[str] = Field(max_length=50)
-    supplier_email: Optional[EmailStr]
+    name: Optional[str] = None
+    description: Optional[str] = None
+    price: Optional[Decimal] = Field(None, ge=0, description="Preço não deve ser menor que zero")
+    category: Optional[str] = None
+    supplier_email: Optional[EmailStr] = None
