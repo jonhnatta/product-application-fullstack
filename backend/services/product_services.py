@@ -1,7 +1,7 @@
 from sqlalchemy.orm import Session
 from typing import List, Optional
-from backend.models.product import Product
-from backend.schemas.product import ProductCreate, ProductUpdate
+from models.product import Product
+from schemas.product import ProductCreate, ProductUpdate
 
 
 class ProductServices:

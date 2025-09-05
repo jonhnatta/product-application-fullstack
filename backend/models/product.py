@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String, Numeric, DateTime
 from sqlalchemy_utils import EmailType
 from sqlalchemy.sql import func
-from backend.database.database import Base
+from database.database import Base
 
 
 class Product(Base):

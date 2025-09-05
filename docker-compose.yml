@@ -1,7 +1,6 @@
-version: "3.8"
 services:
   postgres:
-    image: postgres:latest
+    image: postgres:15
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
@@ -10,11 +9,17 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
-    networks:
-      - mynetwork
 
-networks:
-  mynetwork:
+  api:
+    build: 
+      context: .
+      dockerfile: ./backend/Dockerfile
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+    environment:
+      POSTGRES_DATABASE_URL: ${POSTGRES_DATABASE_URL}
 
 volumes:
   postgres_data:

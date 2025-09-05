@@ -2,7 +2,7 @@
 name = "bootcamp-python"
 version = "0.1.0"
 description = ""
-authors = ["jonhnatta <jonhnatta.santos@gmail.comclear>"]
+authors = ["jonhnatta <jonhnatta.santos@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -14,6 +14,7 @@ pydantic = "^2.11.7"
 fastapi = "^0.116.1"
 uvicorn = {extras = ["standard"], version = "^0.35.0"}
 psycopg2-binary = "^2.9.10"
+email-validator = "^2.3.0"
 
 
 [build-system]

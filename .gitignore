@@ -1,2 +1,16 @@
 .venv
 .env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+.coverage
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+dist/
+build/
+*.egg-info/
+.dockerignore
