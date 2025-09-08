@@ -2,9 +2,11 @@ from fastapi import FastAPI
 from routers.products import router as products_router
 from database import Base, engine
 from models.product import Product
+import os
 
-# Criar as tabelas no banco de dados
-Base.metadata.create_all(bind=engine)
+# Criar as tabelas no banco de dados apenas se não estivermos em modo de teste
+if not os.environ.get("TESTING"):
+    Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
