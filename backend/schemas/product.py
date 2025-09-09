@@ -10,7 +10,7 @@ class ProductBase(BaseModel):
     description: Optional[str] = None
     price: Decimal = Field(ge=0, description="Preço não deve ser menor que zero")
     category: str
-    supplier_email: Optional[EmailStr] = None
+    supplier_email: EmailStr
 
 
 class ProductCreate(ProductBase):
